@@ -16,11 +16,10 @@ function createCards(el) {
   return el
     .map(({ preview, original, description }) => {
       return `
-<li class="gallery__item">
-  <a class="gallery__link" href="${original}">
+
+  <a class="gallery__link gallery__item" href="${original}">
     <img class="gallery__image" src="${preview}" alt="${description}" />
-  </a>
-</li>`;
+  </a>`;
     })
     .join('');
 }
